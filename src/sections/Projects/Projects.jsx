@@ -7,6 +7,7 @@ import ippbCaseStudy from "../../assets/Frame 7ippb case study .png";
 import korvageRedesign from "../../assets/FrameKorvage_redesign _images-1.jpg";
 import growthCraftRedesign from "../../assets/FrameGrowthCraft_redesign _images-1.jpg";
 import ralaProject from "../../assets/Frameralaportal design images.png";
+import schoolAdmissionManagementApp from "../../assets/fotor-ai-2024072493022.jpg";
 
 import ProjectCard from "../../common/ProjectCard";
 
@@ -68,6 +69,17 @@ function Projects() {
             link=""
             h3="Rala Interview Portal"
             p="Web Application"
+          />
+        </div>
+      </section>
+      <section id="projects" className={styles.container}>
+        <h1 className="sectionTitle">Java Projects</h1>
+        <div className={styles.projectsContainer}>
+          <ProjectCard
+            src={schoolAdmissionManagementApp}
+            link="https://github.com/Mallikarjun-S-H/School_Admission_Management_App"
+            h3="School Admission Management App"
+            p="A Easy Way To Handle Admission"
           />
         </div>
       </section>
