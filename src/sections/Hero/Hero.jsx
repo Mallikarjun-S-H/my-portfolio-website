@@ -8,7 +8,7 @@ import githubLight from "../../assets/github-light.svg";
 import githubDark from "../../assets/github-dark.svg";
 import linkedinLight from "../../assets/linkedin-light.svg";
 import linkedinDark from "../../assets/linkedin-dark.svg";
-import CV from "../../assets/Mallikarjunayya-S-Hiremath(1.7years)(FE devloper)-Resume.pdf";
+import CV from "../../assets/Mallikarjunayya-S-Hiremath-(1.8years)(Backend dev).pdf";
 import { useTheme } from "../../common/ThemeContext";
 
 function Hero() {
@@ -52,7 +52,7 @@ function Hero() {
           </a>
         </span>
         <p className={styles.description}>
-          Dynamic <strong>UI/UX designer and Developer</strong> with 1.7 years
+          Dynamic <strong>UI/UX designer and Developer</strong> with 1.8 years
           of hands-on experience creating visually appealing, user-centric
           digital experiences. a proven track record in fast-paced startup
           environments, collaborating across teams to deliver innovative
