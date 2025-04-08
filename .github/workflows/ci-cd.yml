@@ -27,28 +27,14 @@ jobs:
       - name: Login to Amazon ECR
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v2
-
-      - name: Check Docker Auth
-        run: |
-          cat ~/.docker/config.json
       
       - name: Build Docker image
         run: |
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
-          
-      - name: Print Docker Image Tag
-        run: echo "$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"  
-        
-      - name: Print Docker Tag Debug Info
-        run: |
-            echo "Registry: $ECR_REGISTRY"
-            echo "Repo:     $ECR_REPOSITORY"
-            echo "Tag:      $IMAGE_TAG"
-            docker images
             
       - name: Ensure Docker is logged into ECR
         run: |
-              aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin $ECR_REGISTRY
+              aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin $$ECR_REGISTRY
           
       
       - name: Push Docker image
