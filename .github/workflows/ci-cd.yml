@@ -35,11 +35,11 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ${{ secrets.ECR_REGISTRY }}/my-app:${{ github.sha }} .
+          docker build -t ${{ secrets.ECR_REGISTRY }}/msh/portfolio:${{ github.sha }} .
         
       - name: Push Docker image
         run: |
-          docker push ${{ secrets.ECR_REGISTRY }}/my-app:${{ github.sha }}
+          docker push ${{ secrets.ECR_REGISTRY }}/msh/portfolio:${{ github.sha }}
 
       - name: Update K8s deployment
         run: |
