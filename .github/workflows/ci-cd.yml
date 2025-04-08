@@ -38,6 +38,14 @@ jobs:
           
       - name: Print Docker Image Tag
         run: echo "$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"  
+        
+      - name: Print Docker Tag Debug Info
+        run: |
+            echo "Registry: $ECR_REGISTRY"
+            echo "Repo:     $ECR_REPOSITORY"
+            echo "Tag:      $IMAGE_TAG"
+            docker images
+
       
       - name: Push Docker image
         run: |
