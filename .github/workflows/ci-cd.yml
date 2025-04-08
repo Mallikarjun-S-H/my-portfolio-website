@@ -34,7 +34,7 @@ jobs:
             
       - name: Ensure Docker is logged into ECR
         run: |
-              aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin $$ECR_REGISTRY
+              aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin $ECR_REGISTRY
           
       
       - name: Push Docker image
