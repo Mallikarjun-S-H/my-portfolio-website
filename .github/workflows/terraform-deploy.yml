@@ -28,6 +28,13 @@ jobs:
         working-directory: terraform
         run: terraform init
 
+      - name: Terraform import
+        working-directory: terraform
+        run: |
+           terraform import aws_ecr_repository.app demo/portfolio
+           terraform import 'module.eks.module.kms.aws_kms_alias.this["cluster"]' arn:aws:kms:us-east-1:826445948167:alias/eks/demo
+           terraform import module.vpc.aws_vpc.this[0] vpc-0cf258c80234003a5
+
       - name: Terraform Plan
         working-directory: terraform  
         run: terraform plan
@@ -35,7 +42,7 @@ jobs:
       - name: Terraform Apply
         working-directory: terraform 
         run: terraform apply -auto-approve
-        
+
     #   - name: Terraform destroy
     #     working-directory: terraform  
     #     run: terraform destroy
