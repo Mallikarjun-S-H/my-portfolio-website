@@ -1,0 +1,3 @@
+adminPassword: prom-operator
+service:
+  type: LoadBalancer
