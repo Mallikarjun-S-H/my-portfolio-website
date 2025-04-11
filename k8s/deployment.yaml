@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: my-app
-        image: <REPLACE_WITH_ECR_IMAGE>
+        image: 826445948167.dkr.ecr.ap-south-1.amazonaws.com/msh/portfolio:40b67c0ecd71285d4887800411aa3489dc0ef9b3
         ports:
         - containerPort: 3000
