@@ -18,6 +18,8 @@ module "eks" {
     }
   }
 
+   enable_kms = false
+
   tags = {
     Environment = "dev"
     Terraform   = "true"
