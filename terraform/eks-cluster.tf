@@ -19,6 +19,8 @@ module "eks" {
   vpc_id = module.vpc.vpc_id
   subnet_ids = module.vpc.private_subnets
 
+  
+
   eks_managed_node_groups = {
     default = {
       desired_size = 2
@@ -29,6 +31,8 @@ module "eks" {
     }
   }
 
+  kms_key_id = aws_kms_key.eks_key.key_id
+  create_kms_key = false
 
   tags = {
     Environment = "dev"
