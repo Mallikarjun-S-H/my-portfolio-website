@@ -32,7 +32,7 @@ jobs:
         working-directory: terraform
         run: |
           terraform import aws_s3_bucket.tf_state statelock121
-          terraform import aws_kms_alias.this arn:aws:kms:us-east-1:<your-account-id>:alias/eks/demo
+          terraform import aws_kms_alias.this arn:aws:kms:us-east-1:826445948167:alias/eks/demo
 
     #      terraform import aws_ecr_repository.app demo/portfolio
     #      terraform import 'module.eks.module.kms.aws_kms_alias.this["cluster"]' arn:aws:kms:us-east-1:826445948167:alias/eks/demo
