@@ -14,7 +14,7 @@ resource "aws_s3_bucket" "tf_state" {
       }
     }
   }
-
+}
 
 
 resource "aws_dynamodb_table" "tf_lock" {
@@ -26,4 +26,4 @@ resource "aws_dynamodb_table" "tf_lock" {
     type = "S"
   }
 }
-}
+
