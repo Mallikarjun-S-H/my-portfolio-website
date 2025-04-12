@@ -1,3 +1,14 @@
+resource "aws_kms_key" "eks_key" {
+  description             = "KMS key for EKS"
+  enable_key_rotation     = true
+  deletion_window_in_days = 30
+}
+
+resource "aws_kms_alias" "eks_alias" {
+  name          = "alias/eks/demo"
+  target_key_id = aws_kms_key.eks_key.key_id
+}
+
 module "eks" {
   source  = "terraform-aws-modules/eks/aws"
   version = "19.21.0" # Or any stable recent version
@@ -18,7 +29,6 @@ module "eks" {
     }
   }
 
-   enable_kms = false
 
   tags = {
     Environment = "dev"
