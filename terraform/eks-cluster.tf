@@ -8,10 +8,6 @@ module "eks" {
   vpc_id = module.vpc.vpc_id
   subnet_ids = module.vpc.private_subnets
 
-  enable_cluster_encryption = false
-  kms_key_enable_default_policy = false
-  create_kms_key                = false
-
   eks_managed_node_groups = {
     default = {
       desired_size = 2
