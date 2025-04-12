@@ -15,10 +15,7 @@ resource "aws_s3_bucket" "tf_state" {
     }
   }
 
-  lifecycle {
-    prevent_destroy = true
-  }
-}
+
 
 resource "aws_dynamodb_table" "tf_lock" {
   name           = "terraform-lock-table"
@@ -29,7 +26,5 @@ resource "aws_dynamodb_table" "tf_lock" {
     type = "S"
   }
 
-  lifecycle {
-    prevent_destroy = true
-  }
+
 }
