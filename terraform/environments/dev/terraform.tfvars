@@ -1,6 +1,0 @@
-subscription_id = "e6cc686f-6067-48b6-af1d-862d10ed72c3"
-resource_group  = "portfolio-rg"
-location        = "East US"
-cluster_name    = "portfolio-aks"
-dns_prefix      = "portfolio"
-acr_name        = "portfolioregistry"
