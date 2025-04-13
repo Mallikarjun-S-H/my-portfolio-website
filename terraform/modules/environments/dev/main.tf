@@ -1,7 +1,8 @@
 module "aks" {
   source         = "../../modules/aks"
-  cluster_name   = "portfolio-aks"
-  location       = "East US"
-  resource_group = var.resource_group
+  resource_group = var.resource_group_name
+  location       = var.location
+  cluster_name   = var.aks_cluster_name
   dns_prefix     = "portfolio"
+  acr_name       = var.acr_name
 }
